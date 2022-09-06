@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import { Card } from 'react-native-paper';
 import styled from 'styled-components/native';
-import { COLORS, SIZES } from '../../../../utils/constants';
 import IRestaurant from '../../../../@interfaces/IRestaurant';
 
 export interface IRestaurantInfoCardProps {
@@ -9,16 +8,17 @@ export interface IRestaurantInfoCardProps {
 }
 
 const RestaurantCard = styled(Card)`
-  background-color: ${COLORS.white};
+  background-color: ${props => props.theme.colors.bg.secondary};
 `;
 
 const RestaurantCardImage = styled(Card.Cover)`
-  padding: ${SIZES.md}px;
+  padding: ${props => props.theme.space.md};
 `;
 
 const RestaurantCardTitle = styled.Text`
-  padding: ${SIZES.md}px;
-  font-weight: bold;
+  font-family: ${props => props.theme.fonts.body};
+  padding: ${props => props.theme.space.md};
+  color: ${props => props.theme.colors.text.primary};
 `;
 
 const RestaurantInfoCard: FC<IRestaurantInfoCardProps> = ({ restaurant }) => {

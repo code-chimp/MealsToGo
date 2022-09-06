@@ -1,9 +1,8 @@
 import React, { FC } from 'react';
 import { StatusBar } from 'react-native';
 import { Searchbar } from 'react-native-paper';
-import { COLORS, SIZES } from '../../../../utils/constants';
-import RestaurantInfoCard from '../../components/RestaurantInfoCard';
 import styled from 'styled-components/native';
+import RestaurantInfoCard from '../../components/RestaurantInfoCard';
 
 export interface IRestaurantScreenProps {
   searchQuery: string;
@@ -16,13 +15,12 @@ const SafeArea = styled.SafeAreaView`
 `;
 
 const SearchContainer = styled.View`
-  padding: ${SIZES.md}px;
+  padding: ${props => props.theme.space.md};
 `;
 
 const RestaurantsListContainer = styled.View`
   flex: 1;
-  padding: ${SIZES.md}px;
-  background-color: ${COLORS.green};
+  padding: ${props => props.theme.space.md};
 `;
 
 const RestaurantsScreen: FC<IRestaurantScreenProps> = ({ searchQuery, setSearchQuery }) => {
