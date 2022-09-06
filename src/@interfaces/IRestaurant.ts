@@ -3,7 +3,7 @@ export default interface IRestaurant {
   icon?: string;
   photos?: Array<string>;
   address?: string;
-  hours?: string;
   rating?: number;
+  isOpenNow?: boolean;
   isClosedTemporarily?: boolean;
 }
