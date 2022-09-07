@@ -8,6 +8,6 @@ Exploring React Native via Expo
 
 ## **NOTES:**
 
-- TypeScript gives linting errors thanks to the React@18 issue, app still builds
+- Styled Components will not give the linter a break with React@18
 - Keep an eye on React-Native typing fixing React@18+ integration
   (get rid of the *resolutions* workaround in the `package.json`)

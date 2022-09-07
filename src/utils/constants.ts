@@ -1,6 +1,7 @@
 export const COLORS = {
   blue: '#00f',
   green: 'green',
+  red: '#D0421B',
   white: '#fff',
 };
 
